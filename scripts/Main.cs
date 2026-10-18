@@ -2,19 +2,24 @@ using Godot;
 
 public partial class Main : Control
 {
-	[Export] private Label _label;
-	[Export] private Button _button;
-
-	private int _count = 0;
+	[Export] private Label _contentLabel;
+	[Export] private Button _mindmapButton;
+	[Export] private Button _scheduleButton;
+	[Export] private Button _tasksButton;
+	[Export] private Button _flashcardsButton;
 
 	public override void _Ready()
 	{
-		_button.Pressed += OnButtonPressed;
+		_mindmapButton.Pressed += () => ShowPage("Mindmap");
+		_scheduleButton.Pressed += () => ShowPage("Schedule");
+		_tasksButton.Pressed += () => ShowPage("Tasks");
+		_flashcardsButton.Pressed += () => ShowPage("Flashcards");
+
+		ShowPage("Mindmap");
 	}
 
-	private void OnButtonPressed()
+	private void ShowPage(string pageName)
 	{
-		_count++;
-		_label.Text = $"Klik: {_count}";
+		_contentLabel.Text = $"Halaman: {pageName}";
 	}
 }
