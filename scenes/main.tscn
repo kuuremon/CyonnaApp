@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqy3h35dial8w" path="res://scripts/Main.cs" id="1_o5qli"]
 
-[node name="Main" type="Control" unique_id=492234420]
+[node name="Main" type="Control" unique_id=492234420 node_paths=PackedStringArray("_label", "_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,9 +10,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o5qli")
+_label = NodePath("Label")
+_button = NodePath("Button")
 
 [node name="Label" type="Label" parent="." unique_id=1539585627]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Hello Cyonna"
+
+[node name="Button" type="Button" parent="." unique_id=1205671480]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Klik aku"
