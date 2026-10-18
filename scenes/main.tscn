@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqy3h35dial8w" path="res://scripts/Main.cs" id="1_o5qli"]
 
-[node name="Main" type="Control" unique_id=492234420 node_paths=PackedStringArray("_label", "_button")]
+[node name="Main" type="Control" unique_id=492234420 node_paths=PackedStringArray("_contentLabel", "_mindmapButton", "_scheduleButton", "_tasksButton", "_flashcardsButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,17 +10,51 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o5qli")
-_label = NodePath("Label")
-_button = NodePath("Button")
+_contentLabel = NodePath("Root/Content/ContentLabel")
+_mindmapButton = NodePath("Root/Sidebar/SidebarItems/MindmapButton")
+_scheduleButton = NodePath("Root/Sidebar/SidebarItems/ScheduleButton")
+_tasksButton = NodePath("Root/Sidebar/SidebarItems/TasksButton")
+_flashcardsButton = NodePath("Root/Sidebar/SidebarItems/FlashcardsButton")
 
-[node name="Label" type="Label" parent="." unique_id=1539585627]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Hello Cyonna"
+[node name="Root" type="HBoxContainer" parent="." unique_id=123453474]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=1205671480]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Klik aku"
+[node name="Sidebar" type="PanelContainer" parent="Root" unique_id=791880436]
+layout_mode = 2
+
+[node name="SidebarItems" type="VBoxContainer" parent="Root/Sidebar" unique_id=44431261]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Root/Sidebar/SidebarItems" unique_id=1320246614]
+layout_mode = 2
+text = "Cyonna"
+
+[node name="MindmapButton" type="Button" parent="Root/Sidebar/SidebarItems" unique_id=1602207862]
+layout_mode = 2
+text = "Mindmap"
+
+[node name="ScheduleButton" type="Button" parent="Root/Sidebar/SidebarItems" unique_id=340128474]
+layout_mode = 2
+text = "Schedule"
+
+[node name="TasksButton" type="Button" parent="Root/Sidebar/SidebarItems" unique_id=500332838]
+layout_mode = 2
+text = "Tasks"
+
+[node name="FlashcardsButton" type="Button" parent="Root/Sidebar/SidebarItems" unique_id=1564033693]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+text = "Flashcards"
+
+[node name="Content" type="PanelContainer" parent="Root" unique_id=340185988]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ContentLabel" type="Label" parent="Root/Content" unique_id=79019680]
+layout_mode = 2
+size_flags_horizontal = 4
