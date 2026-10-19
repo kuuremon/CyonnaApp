@@ -12,17 +12,26 @@ config_version=5
 
 config/name="Cyonna"
 run/main_scene="uid://6npei0aof2re"
-config/features=PackedStringArray("4.7", "GL Compatibility")
+config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
+run/low_processor_mode=true
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1280
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
 
 [dotnet]
 
 project/assembly_name="Cyonna"
+
+[gui]
+
+theme/custom="uid://c72alhvqv8ee3"
 
 [physics]
 
@@ -30,6 +39,7 @@ project/assembly_name="Cyonna"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

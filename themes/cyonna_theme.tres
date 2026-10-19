@@ -1,0 +1,40 @@
+[gd_resource type="Theme" format=3 uid="uid://c72alhvqv8ee3"]
+
+[ext_resource type="FontFile" uid="uid://cs6v17jy1fn5b" path="res://assets/fonts/DotGothic16-Regular.ttf" id="1_yjq5x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yjq5x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjq5x"]
+bg_color = Color(0.22745098, 0.19215687, 0.4392157, 1)
+border_color = Color(0.95686275, 0.6509804, 0.78431374, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqmyy"]
+bg_color = Color(0.16470589, 0.13725491, 0.3137255, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.43137255, 0.35686275, 0.76862746, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sju3s"]
+bg_color = Color(0.95686275, 0.6509804, 0.78431374, 1)
+border_color = Color(0.9607843, 0.9490196, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ah0rs"]
+bg_color = Color(0.16470589, 0.13725491, 0.3137255, 1)
+anti_aliasing = false
+
+[resource]
+default_font = ExtResource("1_yjq5x")
+Button/colors/font_color = Color(0.9607843, 0.9490196, 1, 1)
+Button/colors/font_focus_color = Color(0.9607843, 0.9490196, 1, 1)
+Button/colors/font_hover_color = Color(0.9607843, 0.9490196, 1, 1)
+Button/colors/font_hover_pressed_color = Color(0.105882354, 0.09019608, 0.2, 1)
+Button/colors/font_pressed_color = Color(0.105882354, 0.09019608, 0.2, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_yjq5x")
+Button/styles/hover = SubResource("StyleBoxFlat_yjq5x")
+Button/styles/normal = SubResource("StyleBoxFlat_xqmyy")
+Button/styles/pressed = SubResource("StyleBoxFlat_sju3s")
+Label/colors/font_color = Color(0.9607843, 0.9490196, 1, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_ah0rs")
